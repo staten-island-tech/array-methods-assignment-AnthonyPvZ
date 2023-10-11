@@ -8,7 +8,13 @@ const people = [
 people.forEach((people)=>console.log(people.firstname));
 people.forEach((people)=>console.log(people.lastname));
 people.forEach((people)=>console.log(people.age));
-people.forEach((people)=>console.log(people.classes));
+
+people.forEach(function (x) {
+    if (people.isArray(x)) {
+        classes.forEach(function(classes){
+        console.log(classes);})
+    }
+});
 
 const adults = people.filter(function(person) {
     return person.age > 18
