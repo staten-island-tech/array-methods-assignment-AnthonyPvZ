@@ -15,3 +15,4 @@ const adults = people.filter(function(person) {
     return person.age > 18
 });
 console.log(adults);
+people.forEach((name) => name.classes.forEach((call) => console.log(call)));
