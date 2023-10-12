@@ -4,17 +4,12 @@ const people = [
     {firstname:"Mike", lastname:"Ehrmantraut", age: 60, classes:["Art", "Technology"]},
     {firstname:"Skyler", lastname:"White", age: 39, classes:["Math", "Technology"]}
 ]
+let flatArray = [].concat(...people);
 
 people.forEach((people)=>console.log(people.firstname));
 people.forEach((people)=>console.log(people.lastname));
 people.forEach((people)=>console.log(people.age));
-
-people.forEach(function (x) {
-    if (people.isArray(x)) {
-        classes.forEach(function(classes){
-        console.log(classes);})
-    }
-});
+people.forEach((people)=>console.log(people.classes));
 
 const adults = people.filter(function(person) {
     return person.age > 18
